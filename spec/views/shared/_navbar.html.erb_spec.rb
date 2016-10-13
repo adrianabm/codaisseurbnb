@@ -11,7 +11,6 @@ describe "shared/_navbar.html.erb" do
       expect(rendered).to have_content user.email
     end
   end
-
   context "with profile" do
     let(:profile) { build :profile }
     let(:user) { create :user, profile: profile }
