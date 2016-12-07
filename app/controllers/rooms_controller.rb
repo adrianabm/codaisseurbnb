@@ -62,5 +62,5 @@ class RoomsController < ApplicationController
       images = params.permit(:images)
       images && images.any? ? images : []
     end
-    
+
 end

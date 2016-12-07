@@ -1,11 +1,11 @@
 <div class="row">
-  <div class="col-md-3">
+  <!-- <div class="col-md-3">
     <ul class="sidebar-list">
       <li class="sidebar-item"><%= link_to "Your Listings", rooms_path, class: "sidebar-link active" %></li>
       <li class="sidebar-item"><%= link_to "Your Reservations", rooms_path, class: "sidebar-link" %></li>
     </ul>
-  </div>
-  <div class="col-md-9">
+  </div> -->
+  <div class="col-md-12">
         <% if current_user.has_room? %>
             <h2>Your Listings</h2>
           <% else %>
@@ -14,14 +14,15 @@
 
         <% @rooms.each do |room| %>
         <div class="row">
-          <div class="col-md-7">
-            <h4><%= room.listing_name %></h4>
-          </div>
-          <div class="col-md-3 right">
-            <%= link_to "View", room, class: "btn btn-default" %>
-            <%= link_to "Update", edit_room_path(room), class: "btn btn-default" %>
+          <div class="inline">
+            <h4 class="btn-left"><%= room.listing_name %></h4>
+            <div class="btn-right">
+              <%= link_to "View", room, class: "btn btn-default" %>
+              <%= link_to "Update", edit_room_path(room), class: "btn btn-default" %>
+            </div>
           </div>
         </div>
+        <hr>
         <% end %>
 
     <%= link_to "Add new place", new_room_path, class: "btn btn-default" %>

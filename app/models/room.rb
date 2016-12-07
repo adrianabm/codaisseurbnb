@@ -18,10 +18,6 @@ class Room < ApplicationRecord
     price < 30
   end
 
-  def has_rooms?
-    room.present?
-  end
-
   def self.order_by_price
     order(:price)
   end
