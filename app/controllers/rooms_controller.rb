@@ -9,7 +9,6 @@ class RoomsController < ApplicationController
   def show
     @themes = @room.themes
     @photos = @room.photos
-
   end
 
   def new
@@ -24,7 +23,7 @@ class RoomsController < ApplicationController
          @room.photos.create(image: image)
        end
 
-       redirect_to edit_room_path(@room), notice: "Room successfully created"
+       redirect_to room_path(@room), notice: "Room successfully created"
      else
        render :new
      end
@@ -44,7 +43,7 @@ class RoomsController < ApplicationController
         @room.photos.create(image: image)
       end
 
-      redirect_to edit_room_path(@room), notice: "Room successfully updated"
+      redirect_to room_path(@room), notice: "Room successfully updated"
     else
       render :edit
     end
@@ -60,7 +59,7 @@ class RoomsController < ApplicationController
     end
 
     def image_params
-      images = params.require(:images)
+      images = params.permit(:images)
       images && images.any? ? images : []
     end
     

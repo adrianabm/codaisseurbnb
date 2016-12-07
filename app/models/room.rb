@@ -5,8 +5,6 @@ class Room < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :guests, through: :bookings, source: :user
 
-
-
   validates :home_type, presence: true
   validates :room_type, presence: true
   validates :accommodate, presence: true
@@ -18,6 +16,10 @@ class Room < ApplicationRecord
 
   def bargain?
     price < 30
+  end
+
+  def has_rooms?
+    room.present?
   end
 
   def self.order_by_price

@@ -6,11 +6,11 @@
     </ul>
   </div>
   <div class="col-md-9">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        Your Listings
-      </div>
-      <div class="panel-body">
+        <% if current_user.has_room? %>
+            <h2>Your Listings</h2>
+          <% else %>
+            <p>You dont have any rooms yet.</p>
+          <% end %>
 
         <% @rooms.each do |room| %>
         <div class="row">
@@ -24,9 +24,6 @@
         </div>
         <% end %>
 
-      </div>
-    </div>
-
-    <%= link_to "Add new place", new_room_path, class: "btn btn-primary" %>
+    <%= link_to "Add new place", new_room_path, class: "btn btn-default" %>
   </div>
 </div>

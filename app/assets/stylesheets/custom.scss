@@ -8,6 +8,15 @@ h2 {
   text-align: center;
 }
 
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;
+  background-color: $carbon;
+  height: 1px;
+}
+
 .btn-left {
   float: left;
 }
