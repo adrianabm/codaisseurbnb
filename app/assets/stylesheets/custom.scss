@@ -1,3 +1,33 @@
-.navbar navbar-default navbar-static-top {
-  background-color: #0d7989;
+body {
+  background-color: $neutral;
+  color: $carbon;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.btn-left {
+  float: left;
+}
+
+.notice,
+.alert {
+  text-align: center;
+  color: $watermelon;
+  font-size: 12px;
+}
+
+#error_explanation {
+  font-size: 12px;
+  color: $watermelon;
+
+  h2 {
+    font-size: 15px;
+  }
+
+  li {
+    list-style-type: none;
+  }
 }
