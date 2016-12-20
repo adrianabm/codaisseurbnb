@@ -12,7 +12,7 @@ This Ruby on Rails application was made in the second week of the [Codaisseur](h
 7. Adding images using Cloudinary and CarrierWave
 8. Basic AJAX in Rails
 
-## Installation
+## Getting Started
 
 1. Make sure [Ruby](https://www.ruby-lang.org/en/documentation/installation/) and [Rails](http://guides.rubyonrails.org/getting_started.html#installing-rails) are installed in your system
 
