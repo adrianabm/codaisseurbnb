@@ -29,6 +29,7 @@ This Ruby on Rails application was made in the second week of the [Codaisseur](h
   rake db:migrate
   ```
 5. Run the application - it should be available on http://localhost:3000
+
   ```bash
   rails s
   ```
