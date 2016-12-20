@@ -1,7 +1,6 @@
 # Codaisseurbnb
 
-## About
-This Ruby on Rails application was made in the second week of the Codaisseur traineeship program. 
+This Ruby on Rails application was made in the second week of the [Codaisseur](https://www.codaisseur.com/) traineeship program. 
 
 ## What I've learned from this project
 1. PostgreSQL database
